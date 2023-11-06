@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="@null"
+    tools:context=".Visitanos">
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="410dp"
+        android:layout_height="508dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376"
+        map:cameraZoom="18"
+        map:uiRotateGestures="true"
+        map:uiZoomControls="true" />
+
+    <EditText
+        android:id="@+id/txtLatitud"
+        android:layout_width="163dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="71dp"
+        android:ems="10"
+        android:hint="Latitud"
+        android:inputType="text"
+        android:textColor="#AB966F"
+        android:textColorHint="#AB966F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtLongitud"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <EditText
+        android:id="@+id/txtLongitud"
+        android:layout_width="155dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Longitud"
+        android:inputType="text"
+        android:textColor="#AB966F"
+        android:textColorHint="#AB966F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtLatitud"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="194dp"
+        android:layout_height="48dp"
+        android:alpha="1.0"
+        android:background="@drawable/input_bg"
+        android:text="Volver"
+        android:textColor="#FBE687"
+        android:textSize="18sp"
+        android:onClick="Volver"
+        app:backgroundTint="@color/material_dynamic_neutral10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

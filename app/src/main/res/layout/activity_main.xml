@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtOlvidastePassword"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="3dp"
+        android:text="¿Olvidaste tu contraseña?"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_light"
+        android:textColorHint="@android:color/holo_blue_bright"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewLogin"
+        app:layout_constraintEnd_toEndOf="@+id/viewLogin"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegistrarse"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresar"
+        app:layout_constraintVertical_bias="0.528" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="259dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="458dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVisitanos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012"
+        app:srcCompat="@mipmap/baldursgatelogo" />
+
+
+    <View
+        android:id="@+id/viewLogin"
+        android:layout_width="312dp"
+        android:layout_height="367dp"
+
+        android:alpha="0.8"
+        android:background="@drawable/input_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="145dp"
+        android:layout_height="50dp"
+        android:alpha="0.7"
+        android:background="@drawable/input_bg"
+        android:onClick="Ingresar"
+        android:text="Ingresar"
+        android:textColor="#FBE687"
+        android:textSize="16sp"
+        app:backgroundTint="@null"
+        app:fontFamily="@font/quattrocento_sans_bold_italic"
+        app:layout_constraintBottom_toBottomOf="@+id/viewLogin"
+        app:layout_constraintEnd_toEndOf="@+id/viewLogin"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/viewLogin"
+        app:layout_constraintTop_toTopOf="@+id/viewLogin"
+        app:layout_constraintVertical_bias="0.618" />
+
+    <EditText
+        android:id="@+id/txtUsuario"
+        android:layout_width="270dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="text"
+        android:textColor="#AB966F"
+        android:textColorHint="#AB966F"
+        app:layout_constraintBottom_toBottomOf="@+id/viewLogin"
+        app:layout_constraintEnd_toEndOf="@+id/viewLogin"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toStartOf="@+id/viewLogin"
+        app:layout_constraintTop_toTopOf="@+id/viewLogin"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="270dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:password="true"
+        android:textColor="#AB966F"
+        android:textColorHint="#AB966F"
+        app:layout_constraintBottom_toBottomOf="@+id/viewLogin"
+        app:layout_constraintEnd_toEndOf="@+id/viewLogin"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/viewLogin"
+        app:layout_constraintTop_toTopOf="@+id/viewLogin"
+        app:layout_constraintVertical_bias="0.37" />
+
+    <ProgressBar
+        android:id="@+id/pb1"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="291dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btnRegistrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:alpha="0.2"
+        android:background="@null"
+        android:text="Registrarse"
+        android:onClick="Registrarse"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="18sp"
+        app:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/viewLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/viewLogin"
+        app:layout_constraintTop_toTopOf="@+id/viewLogin"
+        app:layout_constraintVertical_bias="0.88" />
+
+    <Button
+        android:id="@+id/btnVisitanos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:alpha="1.0"
+        android:backgroundTint="@android:color/transparent"
+        android:text="Visitanos"
+        android:textColor="#E4A249"
+        android:textSize="18sp"
+        android:onClick="Visitanos"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

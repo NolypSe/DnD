@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/creacion"
+    tools:context=".CreacionPersonaje">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:alpha="0.7"
+        android:background="@drawable/bordes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtRaza"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="90dp"
+        android:text="Raza"
+        android:textColor="#AB966F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toStartOf="@+id/txtClases"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <TextView
+        android:id="@+id/txtClases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Clase"
+        android:textColor="#AB966F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <Spinner
+        android:id="@+id/spnnrRaza"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="12dp"
+        android:alpha="0.6"
+        android:background="@drawable/bordes"
+        android:dropDownSelector="@color/white"
+        android:popupBackground="@drawable/bordes"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnVerDisenio"
+        app:layout_constraintEnd_toStartOf="@+id/spnnrClase"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtRaza"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/spnnrClase"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="50dp"
+        android:alpha="0.6"
+        android:background="@drawable/bordes"
+        android:popupBackground="@drawable/bordes"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/spnnrRaza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spnnrRaza"
+        app:layout_constraintTop_toTopOf="@+id/spnnrRaza"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnVerDisenio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.6"
+        android:background="@drawable/input_bg"
+        android:text="Ver diseños"
+        android:onClick="RazasPreview"
+        android:textColor="#AB966F"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup4"
+        android:layout_width="138dp"
+        android:layout_height="153dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view">
+
+        <RadioButton
+            android:id="@+id/rdoMasculino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rdoFemenino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Femenino"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rdoNoBinario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Binario"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtTransfondo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="9dp"
+        android:text="Transfondo"
+        android:textColor="#AB966F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/chkCriminal"
+        app:layout_constraintEnd_toEndOf="@+id/chkCriminal"
+        app:layout_constraintStart_toStartOf="@+id/chkAcolito" />
+
+    <CheckBox
+        android:id="@+id/chkErudito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Erudito"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.572" />
+
+    <CheckBox
+        android:id="@+id/chkCriminal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Criminal"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.427" />
+
+    <CheckBox
+        android:id="@+id/chkAcolito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acolito"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.425" />
+
+    <CheckBox
+        android:id="@+id/chkAnimador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Animador"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.579"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <CheckBox
+        android:id="@+id/chkNoble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Noble"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <CheckBox
+        android:id="@+id/chkForastero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forastero"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.579"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.574" />
+
+    <CheckBox
+        android:id="@+id/chkSoldado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soldado"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.561"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.648" />
+
+    <CheckBox
+        android:id="@+id/chkHuerfano"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Huerfano"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.648" />
+
+    <TextView
+        android:id="@+id/txtGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="10dp"
+        android:text="Genero"
+        android:textColor="#AB966F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup4"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup4" />
+
+    <EditText
+        android:id="@+id/iTxtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="#AB966F"
+        android:textColorHint="#AB966F"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCrearPersonaje"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCrearPersonaje"
+        android:layout_width="189dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="56dp"
+        android:alpha="0.6"
+        android:background="@drawable/input_bg"
+        android:hapticFeedbackEnabled="false"
+        android:text="Crear Personaje"
+        android:textColor="#AB966F"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:onClick="CrearPersonaje"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

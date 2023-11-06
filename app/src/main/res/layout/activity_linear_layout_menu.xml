@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/menu"
+    android:orientation="vertical"
+    tools:context=".LinearLayoutMenu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view12"
+            android:layout_width="match_parent"
+            android:layout_height="53dp" />
+
+        <Button
+            android:id="@+id/btnCrearPj"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:alpha="0.9"
+            android:backgroundTint="#302F32"
+            android:drawableLeft="@mipmap/crear"
+            android:onClick="Creacion"
+            android:text="Crear Personaje"
+
+            android:textAlignment="center" />
+
+        <View
+            android:id="@+id/view13"
+            android:layout_width="match_parent"
+            android:layout_height="53dp" />
+
+        <Button
+            android:id="@+id/btnVerClases"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:alpha="0.9"
+            android:backgroundTint="#302F32"
+            android:onClick="TableClases"
+            android:drawableLeft="@mipmap/clases"
+            android:text="Ver Clases"
+            android:textAlignment="center" />
+
+        <View
+            android:id="@+id/view14"
+            android:layout_width="match_parent"
+            android:layout_height="53dp" />
+
+        <Button
+            android:id="@+id/btnVerCompaneros"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:alpha="0.9"
+            android:backgroundTint="#302F32"
+            android:drawableLeft="@mipmap/personajes"
+            android:onClick="Companieros"
+            android:text="Ver Compañeros"
+            android:textAlignment="center" />
+
+        <View
+            android:id="@+id/view15"
+            android:layout_width="400dp"
+            android:layout_height="53dp" />
+
+        <Button
+            android:id="@+id/btnMisPersonajes"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:alpha="0.9"
+            android:backgroundTint="#302F32"
+            android:drawableLeft="@mipmap/mipersonaje"
+            android:text="Mis Personajes"
+            android:onClick="Personajes"
+            android:textAlignment="center" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="53dp" />
+
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:alpha="0.9"
+            android:backgroundTint="#302F32"
+            android:onClick="CerrarSesion"
+            android:drawableLeft="@mipmap/cerrarsesion"
+            android:text="Cerrar Sesión"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

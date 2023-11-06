@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DisenioRazas">
+
+    <ScrollView
+        android:id="@+id/scrollRaza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:contentDescription="Razas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/Elfo"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:contentDescription="Elfo"
+                android:onClick="RazasNombre"
+                android:src="@mipmap/elfo" />
+
+            <ImageButton
+                android:id="@+id/Humano"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:contentDescription="Humano"
+                android:onClick="RazasNombre"
+                android:src="@mipmap/humano" />
+
+            <ImageButton
+                android:id="@+id/Drow"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:contentDescription="Drow"
+                android:onClick="RazasNombre"
+                android:src="@mipmap/drow" />
+
+            <ImageButton
+                android:id="@+id/Dragonico"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:contentDescription="Dragonico"
+                android:onClick="RazasNombre"
+                android:src="@mipmap/draconico" />
+
+            <ImageButton
+                android:id="@+id/Gnomo"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:contentDescription="Gnomo"
+                android:onClick="RazasNombre"
+                android:src="@mipmap/gnomo" />
+
+            <ImageButton
+                android:id="@+id/Enano"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:contentDescription="Enano"
+                android:onClick="RazasNombre"
+                android:src="@mipmap/enano" />
+
+            <ImageButton
+                android:id="@+id/Semiorco"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:contentDescription="Semi Orco"
+                android:onClick="RazasNombre"
+                android:src="@mipmap/semiorco" />
+
+            <ImageButton
+                android:id="@+id/Mediano"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:contentDescription="Mediano"
+                android:onClick="RazasNombre"
+                android:src="@mipmap/mediano" />
+
+            <ImageButton
+                android:id="@+id/Semielfo"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:contentDescription="Semi Elfo"
+                android:onClick="RazasNombre"
+                android:src="@mipmap/semielfo" />
+
+            <ImageButton
+                android:id="@+id/Gith"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:contentDescription="Githyanki"
+                android:onClick="RazasNombre"
+                android:src="@mipmap/gith" />
+
+            <ImageButton
+                android:id="@+id/Tiefling"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:contentDescription="Tiefling"
+                android:onClick="RazasNombre"
+                android:src="@mipmap/tiefling" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
