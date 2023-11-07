@@ -41,7 +41,9 @@ public class Registro extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Por favor, complete todos los campos.", Toast.LENGTH_SHORT).show();
                 } else if (!pass.equals(confirmPass)) {
                     Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden. Vuelve a intentarlo.", Toast.LENGTH_SHORT).show();
-                } else {
+                } else if (usuarioExistente(username)) {
+                        Toast.makeText(getApplicationContext(), "El usuario ya existe", Toast.LENGTH_SHORT).show();
+                    } else {
                     try {
                         c = new Usuario(username, pass);
 
@@ -59,6 +61,9 @@ public class Registro extends AppCompatActivity {
             }
         });
     }
+        private boolean usuarioExistente(String username) {
+            return dao.existeUsuario(username);
+        }
 }
 
 

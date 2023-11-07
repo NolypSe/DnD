@@ -97,5 +97,18 @@ public class daoUsuario {
 
         return usuarioId;
     }
+
+    public boolean existeUsuario(String username) {
+        String[] columns = {"id"};
+        String selection = "usuario = ?";
+        String[] selectionArgs = {username};
+
+        Cursor cursor = bd.query("usuario", columns, selection, selectionArgs, null, null, null);
+
+        boolean usuarioExistente = cursor.moveToFirst();
+        cursor.close();
+
+        return usuarioExistente;
+    }
 }
 
